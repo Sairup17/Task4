@@ -1,71 +1,114 @@
-*{margin: 0; padding: 0;font-family: 'Old Standard TT', serif;}
-.container{
-     display: grid;
-     justify-content: center;
-     align-content: center;
-     min-height: 100vh;
-     grid-template-columns: 30vw;
-     grid-template-rows: repeat(3,10vh) 5vh repeat(2,10vh);
-     grid-gap: 10px;
-     
-}
-body{
-    background: black;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-h1{
+html,
+body {
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: #010615;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #060c21;
+    position: relative;
+    width: 600px;
+    min-height: 500px;
+    margin: 40px;
+}
+
+.container:before {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+}
+
+.container:after {
+    content: '';
+    position: absolute;
+    background: #fff;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -2;
+    filter: blur(40px);
+    margin: 30px;
+}
+
+.container:before,
+.container::after {
+    background: linear-gradient(235 deg, #ff005e, #010615, #fbff00);
+}
+
+.container hr {
+    background-color: #fff;
+}
+
+.container h1 {
+    color: #fff;
     text-align: center;
-    color: white;
-}
-.submit-btn{
-    background-color: turquoise;
-}
-.bmi-value{
-    background-color: yellow;
-    display: grid;
-    grid-template-rows: 50% 50%;
-}
-.status{
-    background-color: aquamarine;
-    display: grid;
-    grid-template-rows: 50% 50%;
-    
-}
-.container > div{
+    margin-bottom: 20px;
+    margin-top: 5px;
     padding: 10px;
-    font-size: 20px;
+}
+
+.container label {
+    font-size: 35px;
+    color: rgb(204, 199, 199);
+    margin-left: 35%;
     font-weight: bold;
-    color: black;
-    border-radius: 10px;
 }
-button,input{
-    min-width: 100%;
-    min-height: 100%;
+
+.container input {
+    font-size: 30px;
+    margin: 10px 5%;
+    width: 90%;
+    text-align: center;
+    font-weight: bold;
+}
+
+.container button {
+    background-color: rgb(196, 15, 15);
+    color: #fff;
+    font-size: 25px;
+    margin: 15px 35%;
     border: none;
-    outline: none;
-    font-size: 1.5vw;
-    border-radius: 8px;
 }
-input{
-    background: #ffdd99;
-    text-indent: 0.5em;
-    max-width:100% ;
-    color: black;
-    outline: none;
+
+.container p {
+    font-size: 25px;
+    font-weight: bold;
+    color: rgb(7, 194, 7);
+    margin: 25px;
+    text-align: center;
 }
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-input[type=number] {
-    -moz-appearance: textfield;
-}
-button{
-    background: tomato;
-    cursor: pointer;
-}
-button:hover{
-    background: #c70039;
-    color: white;
-}
+
+     
+
+
+
+  
+
+
+   
+   
+
+
+  
+
+
